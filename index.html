@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morgan's Resume</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!-- I think I'll make the page dark so it doesn't burn peoples' eyes -->
+    <nav>
+        <h1>Morgan McMillan</h1>
+        <ul>
+            <li><a href="#about_me">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#github">Contributions</a></li>
+        </ul>
+        <!-- TODO: add github icon SVG and link, and whatever that Daisy class was -->
+        <a src="https://github.com/MorganMcmillan" class="logo"><img src="images/github-mark-white.svg" alt="github account"></a>
+    </nav>
+    <main>
+        <div class="relative">
+            <div class="hero w-screen h-screen absolute">
+                <!-- Put this in center -->
+                <h1 id="about_me">Morgan McMillan</h1>
+                <h2>A developer you can trust</h2>
+            </div>
+            <div class="carousel w-screen h-screen absolute">
+                <!-- TODO: add images that showcase me being an awesome developer -->
+            </div>
+        </div>
+        <div class="card">
+            <h1 id="skills">Skills</h1>
+            <div class="card">
+                <h2>Hard Skills</h2>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+            <div class="card">
+                <h2>Soft Skills</h2>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+        <div>
+            <h1 id="projects">Projects</h1>
+            <div class="flex flex-row">
+                <div class="card"></div>
+                <img src="" alt="">
+            </div>
+            <div class="flex flex-row">
+                <img src="" alt="">
+                <div class="card"></div>
+            </div>
+            <div class="flex flex-row">
+                <div class="card"></div>
+                <img src="" alt="">
+            </div>
+        </div>
+        <div>
+            <h1 id="github">Github</h1>
+            <!-- TODO: add a github dashboard, or at least something that placeholds it -->
+            <div class="w-6/10">
+                <div id="gh_squares"></div>
+            </div>
+        </div>
+        <div>
+            <h1 id="experience">Experience</h1>
+            <div class="timeline timeline-vertical"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="flex">
+            <h1>Morgan McMillan</h1>
+            <div>
+                <h2>Contact</h2>
+                <a href="">_GMAIL</a>
+                <a href="">_OUTLOOK</a>
+                <a href="">_PHONE</a>
+            </div>
+            <div>
+                <h2>Coding</h2>
+                <a href="">Github <img src="images/github-mark-white.svg" alt="github account"></a>
+                <a href="">Codingame</a>
+            </div>
+            <div>
+                <h2>Email Me</h2>
+                <p>Enter your email address</p>
+                <form>
+                    <!-- TODO: combine the input and button visually -->
+                    <div>
+                        <input type="email" name="email" id="email">
+                        <button id="submit" class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
