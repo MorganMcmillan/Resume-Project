@@ -1,102 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth; scroll-padding-top: 4rem;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morgan's Resume</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- I think I'll make the page dark so it doesn't burn peoples' eyes -->
-    <nav>
-        <h1>Morgan McMillan</h1>
-        <ul>
+    <nav class="navbar bg-base-200 sticky top-0 z-10">
+        <h1 class="navbar-start badge size-fit text-2xl">Morgan McMillan</h1>
+        <ul class="navbar-end menu menu-horizontal">
             <li><a href="#about_me">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#github">Contributions</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contacts">Contacts</a></li>
         </ul>
         <!-- TODO: add github icon SVG and link, and whatever that Daisy class was -->
-        <a src="https://github.com/MorganMcmillan" class="logo"><img src="images/github-mark-white.svg" alt="github account"></a>
+        <a href="https://github.com/MorganMcmillan" class="size-8 ml-auto"><img src="images/github-mark-white.svg" alt="github account"></a>
     </nav>
     <main>
-        <div class="relative">
-            <div class="hero w-screen h-screen absolute">
+        <section id="about_me" class="w-screen h-screen">
+            <div class="hero size-full absolute bg-base-200">
                 <!-- Put this in center -->
-                <h1 id="about_me">Morgan McMillan</h1>
-                <h2>A developer you can trust</h2>
+                <div class="flex-col hero-content">
+                    <h1 class="text-6xl">Morgan McMillan</h1>
+                    <h2 class="text-2xl">A developer you can trust</h2>
+                </div>
             </div>
             <div class="carousel w-screen h-screen absolute">
                 <!-- TODO: add images that showcase me being an awesome developer -->
             </div>
-        </div>
-        <div class="card">
-            <h1 id="skills">Skills</h1>
-            <div class="card">
-                <h2>Hard Skills</h2>
-                <div class="card"></div>
-                <div class="card"></div>
-            </div>
-            <div class="card">
-                <h2>Soft Skills</h2>
-                <div class="card"></div>
-                <div class="card"></div>
-            </div>
-        </div>
-        <div>
-            <h1 id="projects">Projects</h1>
-            <div class="flex flex-row">
-                <div class="card"></div>
-                <img src="" alt="">
-            </div>
-            <div class="flex flex-row">
-                <img src="" alt="">
-                <div class="card"></div>
-            </div>
-            <div class="flex flex-row">
-                <div class="card"></div>
-                <img src="" alt="">
-            </div>
-        </div>
-        <div>
-            <h1 id="github">Github</h1>
-            <!-- TODO: add a github dashboard, or at least something that placeholds it -->
-            <div class="w-6/10">
-                <div id="gh_squares"></div>
-            </div>
-        </div>
-        <div>
-            <h1 id="experience">Experience</h1>
-            <div class="timeline timeline-vertical"></div>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="flex">
-            <h1>Morgan McMillan</h1>
-            <div>
-                <h2>Contact</h2>
-                <a href="">_GMAIL</a>
-                <a href="">_OUTLOOK</a>
-                <a href="">_PHONE</a>
-            </div>
-            <div>
-                <h2>Coding</h2>
-                <a href="">Github <img src="images/github-mark-white.svg" alt="github account"></a>
-                <a href="">Codingame</a>
-            </div>
-            <div>
-                <h2>Email Me</h2>
-                <p>Enter your email address</p>
-                <form>
-                    <!-- TODO: combine the input and button visually -->
-                    <div>
-                        <input type="email" name="email" id="email">
-                        <button id="submit" class="btn">Submit</button>
+        </section>
+
+        <section id="skills" class="w-screen min-h-screen bg-base-100 flex flex-col items-center">
+            <h1 class="text-4xl">Skills</h1>
+            <div class="flex flex-row flex-wrap justify-around w-full gap-16 mb-16">
+                <div class="card items-center size-128 bg-primary">
+                    <h2 class="text-2xl">Hard Skills</h2>
+                    <div class="card">
+                        <h3>Program Design</h3>
                     </div>
-                </form>
+                    <div class="card">
+                        <h3>Web Development</h3>
+                    </div>
+                </div>
+                <div class="card items-center size-128 bg-secondary">
+                    <h2 class="text-2xl">Soft Skills</h2>
+                    <div class="card">
+                        <h3>Communication</h3>
+                    </div>
+                    <div class="card">
+                        <h3>Note Taking</h3>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="projects" class="bg-base-300 w-screen min-h-screen flex flex-col gap-16 pb-16 items-center">
+            <h1 class="text-4xl">Projects</h1>
+            <div class="flex flex-row gap-64">
+                <div class="card size-96 bg-accent">
+                    <h2 class="card-title">Ant</h2>
+                    <p>This was my first major project in Rust, making use of <a href="https://www.raylib.com/" class="link link-primary">Raylib</a> for drawing and input. It adapts <a href="https://en.wikipedia.org/wiki/Langton's_ant" class="link link-primary">Langton's Ant</a> by allowing the ants to move in 4 additional diagonal directions. To prevent the ants from wandering off endlessly, they wrap around the board and keep interacting with the pheromone trails, which leads to some interesting patterns.</p>
+                    <a href="https://github.com/MorganMcmillan/ant" class="link link-secondary">View project</a>
+                </div>
+                <img src="" alt="" class="size-96">
+            </div>
+            <div class="flex flex-row gap-64">
+                <img src="" alt="" class="size-96">
+                <div class="card size-96 bg-accent">
+                    <h2 class="card-title">Xtest</h2>
+                    <p>TODO ADD DESCRIPTION</p>
+                    <p>This was my first big project for XNL, a Minecraft team that made programs in Lua.</p>
+                    <a href="https://github.com/experimental-celestial-laboratories/xtest" class="link link-secondary">View project</a>
+                </div>
+            </div>
+            <div class="flex flex-row gap-64">
+                <div class="card size-96 bg-accent">
+                    <h2 class="card-title">Sleep Keeper <span class="badge badge-warning">In Progress!</span></h2>
+                    <p>No more runaway sleep debt! With Sleep Keeper you track the amount of sleep you get for each day in a calendar that shows you the approximate quality of your sleep. Simply enter the amount of hours you slept, along with what time, and receive instant feedback on your sleep habits.</p>
+                    <a href="https://github.com/MorganMcmillan/Sleep-Keeper" class="link link-secondary">View project</a>
+                </div>
+                <img src="" alt="" class="size-96">
+            </div>
+        </section>
+
+        <section id="github" class="w-screen h-screen flex flex-col justify-between items-center">
+            <h1 class="text-4xl">Github</h1>
+            <!-- TODO: add a github dashboard, or at least something that placeholds it -->
+            <div class="card card-side items-center w-6/10 h-80 bg-base-300">
+                <p class="ml-12">Github dashboard is currently under construction.</p>
+                <div id="gh_squares">
+                    <img src="images/under-construction.gif" alt="dashboard under construction">
+                </div>
+            </div>
+            <br>
+        </section>
+        <section id="experience" class="bg-base-300 w-screen h-screen flex flex-col items-center">
+            <h1 class="text-4xl">Experience</h1>
+            <!-- TODO: add timeline events -->
+            <ul class="timeline timeline-vertical mt-32">
+                <li>
+                    <div class="timeline-start">TODO</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end timeline-box">TODO</div>
+                    <hr>
+                </li>
+                <li>
+                    <hr>
+                    <div class="timeline-start">TODO</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end timeline-box">TODO</div>
+                    <hr>
+                </li>
+                <li>
+                    <hr>
+                    <div class="timeline-start">TODO</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end timeline-box">TODO</div>
+                    <hr>
+                </li>
+                <li>
+                    <hr>
+                    <div class="timeline-start">TODO</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end timeline-box">TODO</div>
+                    <hr>
+                </li>
+                <li>
+                    <hr>
+                    <div class="timeline-start">TODO</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end timeline-box">TODO</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer id="contacts" class="footer sm:footer-horizontal bg-base-200 min-h-64">
+        <aside>
+            <h1 class="text-4xl md:ml-16">Morgan McMillan</h1>
+        </aside>
+        <nav class="flex flex-col">
+            <h2 class="text-2xl footer-title">Contact</h2>
+            <a href="mailto:mcmillan.a.morgan@gmail.com">mcmillan.a.morgan@gmail.com</a>
+            <a href="mailto:morgan.mcmillan@rdpolytech.ca">morgan.mcmillan@rdpolytech.ca</a>
+            <p>(1+) 825-989-9109</p>
+        </nav>
+        <nav>
+            <h2 class="text-2xl footer-title">Coding</h2>
+            <a class="flex gap-1 items-center" href="https://github.com/MorganMcmillan">Github <img class="size-4" src="images/github-mark-white.svg" alt="github account"></a>
+            <a href="https://www.codingame.com/profile/a10b34d3eadd56af61fb4fad4ad72c121293545">Codingame</a>
+        </nav>
+        <nav class="flex flex-col">
+            <h2 class="text-2xl footer-title">Email Me</h2>
+            <p>Enter your email address</p>
+            <form>
+                <div class="join">
+                    <input type="email" name="email" id="email" class="input join-item" placeholder="username@site.com">
+                    <button id="submit" class="btn btn-primary rounded-r-md">Submit</button>
+                </div>
+            </form>
+        </nav>
     </footer>
 </body>
 </html>
