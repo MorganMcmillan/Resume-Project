@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- I think I'll make the page dark so it doesn't burn peoples' eyes -->
-    <nav class="navbar bg-base-200 sticky top-0 z-10">
+    <nav class="navbar bg-base-200 sticky top-0 z-20">
         <h1 class="navbar-start badge size-fit text-2xl">Morgan McMillan</h1>
         <ul class="navbar-end menu menu-horizontal">
             <li><a href="#about_me">About Me</a></li>
@@ -18,42 +18,76 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
-        <!-- TODO: add github icon SVG and link, and whatever that Daisy class was -->
         <a href="https://github.com/MorganMcmillan" class="size-8 ml-auto"><img src="images/github-mark-white.svg" alt="github account"></a>
     </nav>
+
     <main>
-        <section id="about_me" class="w-screen h-screen">
-            <div class="hero size-full absolute bg-base-200">
+        <section id="about_me" class="w-screen h-screen relative">
+            <div class="hero size-full bg-base-200 absolute">
                 <!-- Put this in center -->
-                <div class="flex-col hero-content">
+                <div class="flex-col hero-content card bg-radial from-neutral/60 to-70% p-16 z-10">
                     <h1 class="text-6xl">Morgan McMillan</h1>
                     <h2 class="text-2xl">A developer you can trust</h2>
                 </div>
             </div>
-            <div class="carousel w-screen h-screen absolute">
-                <!-- TODO: add images that showcase me being an awesome developer -->
+            <div class="carousel size-full absolute">
+                <div class="carousel-item">
+                    <img class="w-screen h-screen object-cover" src="images/top-1.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-screen h-screen object-cover" src="images/top-2.jpg" alt="">
+                </div>
             </div>
         </section>
 
         <section id="skills" class="w-screen min-h-screen bg-base-100 flex flex-col items-center">
             <h1 class="text-4xl">Skills</h1>
-            <div class="flex flex-row flex-wrap justify-around w-full gap-16 mb-16">
-                <div class="card items-center size-128 bg-primary">
+            <div class="flex w-full flex-row flex-wrap justify-around mt-16 mb-16">
+                <div class="w-9/10 h-48 -mt-12 bg-error-content absolute rounded-4xl"></div>
+                <div class="card items-center gap-16 w-128 bg-primary">
                     <h2 class="text-2xl">Hard Skills</h2>
-                    <div class="card">
-                        <h3>Program Design</h3>
+                    <div class="card size-96 bg-info-content">
+                        <div class="card-body">
+                            <h3 class="card-title">Program Design</h3>
+                            <p>
+                                Knowing how to write programs is one thing, but actually designing them is another.
+                                It's too easy to not know what to write next when just typing code, which is why it's important to plan out your logic and design.
+                                I learned from RDP's Problem Solving/Program logic class how use composable structures to build up an entire program,
+                                and used it to create the logic for a Minesweeper game, the largest project I had ever done.
+                            </p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Web Development</h3>
+                    <div class="card size-96 bg-info-content">
+                        <div class="card-body">
+                            <h3 class="card-title">Web Development</h3>
+                            <p>I learned how to write HTML, CSS, and JavaScript. For our final project I used semantic HTML structure, Bootstrap components, and JavaScript to create a webpage for our teacher's cats.</p>
+                            <div class="card-actions">
+                                <a href="https://github.com/MorganMcmillan/HTML-Assignment-3" class="link link-secondary">View Project</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card items-center size-128 bg-secondary">
+                <div class="card items-center gap-16 w-128 bg-secondary">
                     <h2 class="text-2xl">Soft Skills</h2>
-                    <div class="card">
-                        <h3>Communication</h3>
+                    <div class="card size-96 bg-warning-content">
+                        <div class="card-body">
+                            <h3 class="card-title">Communication</h3>
+                            <p>Last semester's class taught me how to communicate in a clear and concise manner. I learned how to write documents and reports, how to shorten sentences and paragraphs, and how to be ethical while doing so.</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Note Taking</h3>
+                    <div class="card size-96 bg-warning-content mb-16">
+                        <div class="card-body">
+                            <h3 class="card-title">Note Taking</h3>
+                            <p>
+                                Before starting college I didn't know how to take notes.
+                                Now I've learnt the importance of note-taking and what it means to take good notes.
+                                I've begun using this program called <a href="https://obsidian.md/" class="link link-primary">Obsidian</a> which is a digital note-taking program that lets you link together notes and categorize them using tags.
+                            </p>
+                            <p>
+                                I've also been reading How to Take Smart Notes, which teaches the Zettelkasten method and its advantages.
+                                This approach has allowed me to research an entire methodology of teamwork within four days.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,28 +97,52 @@
             <h1 class="text-4xl">Projects</h1>
             <div class="flex flex-row gap-64">
                 <div class="card size-96 bg-accent">
-                    <h2 class="card-title">Ant</h2>
-                    <p>This was my first major project in Rust, making use of <a href="https://www.raylib.com/" class="link link-primary">Raylib</a> for drawing and input. It adapts <a href="https://en.wikipedia.org/wiki/Langton's_ant" class="link link-primary">Langton's Ant</a> by allowing the ants to move in 4 additional diagonal directions. To prevent the ants from wandering off endlessly, they wrap around the board and keep interacting with the pheromone trails, which leads to some interesting patterns.</p>
-                    <a href="https://github.com/MorganMcmillan/ant" class="link link-secondary">View project</a>
+                    <div class="card-body">
+                        <h2 class="card-title">Ant</h2>
+                        <p>This was my first major project in Rust, making use of <a href="https://www.raylib.com/" class="link link-primary">Raylib</a> for drawing and input. It adapts <a href="https://en.wikipedia.org/wiki/Langton's_ant" class="link link-primary">Langton's Ant</a> by allowing the ants to move in 4 additional diagonal directions. To prevent the ants from wandering off endlessly, they wrap around the board and keep interacting with the pheromone trails, which leads to some interesting patterns.</p>
+                        <div class="card-actions justify-end">
+                            <a href="https://github.com/MorganMcmillan/ant" class="link link-secondary">View project</a>
+                        </div>
+                    </div>
                 </div>
-                <img src="" alt="" class="size-96">
+                <div class="size-96 flex items-center">
+                    <a href="https://github.com/MorganMcmillan/ant">
+                        <img class="size-96 object-cover rounded-xl" src="images/ant.png" alt="">
+                    </a>
+                </div>
             </div>
             <div class="flex flex-row gap-64">
-                <img src="" alt="" class="size-96">
+                <div class="size-96 flex items-center">
+                    <a href="https://github.com/experimental-celestial-laboratories/xtest">
+                        <img class="rounded-xl" src="images/xtest.png" alt="">
+                    </a>
+                </div>
                 <div class="card size-96 bg-accent">
-                    <h2 class="card-title">Xtest</h2>
-                    <p>TODO ADD DESCRIPTION</p>
-                    <p>This was my first big project for XNL, a Minecraft team that made programs in Lua.</p>
-                    <a href="https://github.com/experimental-celestial-laboratories/xtest" class="link link-secondary">View project</a>
+                    <div class="card-body">
+                        <h2 class="card-title">Xtest</h2>
+                        <p>This was my first big project for XNL, a Minecraft team that made programs in Lua. I created this to test our programs, and as a general piece of software to be distributed to other players.</p>
+                        <p>It was designed as an alternative to LuaUnit, which would run tests at random. Xtest addressed this by storing each test in a list and running each in order.</p>
+                        <div class="card-actions">
+                            <a href="https://github.com/experimental-celestial-laboratories/xtest" class="link link-secondary">View project</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-row gap-64">
                 <div class="card size-96 bg-accent">
-                    <h2 class="card-title">Sleep Keeper <span class="badge badge-warning">In Progress!</span></h2>
-                    <p>No more runaway sleep debt! With Sleep Keeper you track the amount of sleep you get for each day in a calendar that shows you the approximate quality of your sleep. Simply enter the amount of hours you slept, along with what time, and receive instant feedback on your sleep habits.</p>
-                    <a href="https://github.com/MorganMcmillan/Sleep-Keeper" class="link link-secondary">View project</a>
+                    <div class="card-body">
+                        <h2 class="card-title">Sleep Keeper <span class="badge badge-warning badge-xs text-warning-content">In Progress!</span></h2>
+                        <p>No more runaway sleep debt! With Sleep Keeper you track the amount of sleep you get for each day in a calendar that shows you the approximate quality of your sleep. Simply enter the amount of hours you slept, along with what time, and receive instant feedback on your sleep habits.</p>
+                        <div class="card-actions justify-end">
+                            <a href="https://github.com/MorganMcmillan/Sleep-Keeper" class="link link-secondary">View project</a>
+                        </div>
+                    </div>
                 </div>
-                <img src="" alt="" class="size-96">
+                <div class="size-96 flex items-center">
+                    <a href="https://github.com/MorganMcmillan/Sleep-Keeper">
+                        <img class="rounded-xl" src="images/sleep-keeper.png" alt="">
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -99,47 +157,83 @@
             </div>
             <br>
         </section>
+
         <section id="experience" class="bg-base-300 w-screen h-screen flex flex-col items-center">
             <h1 class="text-4xl">Experience</h1>
-            <!-- TODO: add timeline events -->
             <ul class="timeline timeline-vertical mt-32">
                 <li>
-                    <div class="timeline-start">TODO</div>
+                    <div class="timeline-start">2014</div>
                     <div class="timeline-middle">✅</div>
-                    <div class="timeline-end timeline-box">TODO</div>
-                    <hr>
+                    <div class="timeline-end timeline-box">Learned Scratch at a summer camp.</div>
+                    <hr class="bg-secondary">
                 </li>
                 <li>
-                    <hr>
-                    <div class="timeline-start">TODO</div>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start timeline-box">Lua + Computercraft</div>
                     <div class="timeline-middle">✅</div>
-                    <div class="timeline-end timeline-box">TODO</div>
-                    <hr>
+                    <div class="timeline-end">2020</div>
+                    <hr class="bg-secondary">
                 </li>
                 <li>
-                    <hr>
-                    <div class="timeline-start">TODO</div>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start">2021</div>
                     <div class="timeline-middle">✅</div>
-                    <div class="timeline-end timeline-box">TODO</div>
-                    <hr>
+                    <div class="timeline-end timeline-box">C</div>
+                    <hr class="bg-secondary">
                 </li>
                 <li>
-                    <hr>
-                    <div class="timeline-start">TODO</div>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start timeline-box">Learned Rust. Created a simulation of Langton's Ant.</div>
                     <div class="timeline-middle">✅</div>
-                    <div class="timeline-end timeline-box">TODO</div>
-                    <hr>
+                    <div class="timeline-end">2022</div>
+                    <hr class="bg-secondary">
                 </li>
                 <li>
-                    <hr>
-                    <div class="timeline-start">TODO</div>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start">2023</div>
                     <div class="timeline-middle">✅</div>
-                    <div class="timeline-end timeline-box">TODO</div>
+                    <div class="timeline-end timeline-box">Joined XNL, a ComputerCraft team run on Switchcraft 3, a Minecraft server for programmers.</div>
+                    <hr class="bg-secondary">
+                </li>
+                <li>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start timeline-box">Installed Ubuntu on my desktop.</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end">2024</div>
+                    <hr class="bg-secondary">
+                </li>
+                <li>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start">2024</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end timeline-box">Learned how to design programs.</div>
+                    <hr class="bg-secondary">
+                </li>
+                <li>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start timeline-box">Python + JavaScript</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end">2024</div>
+                    <hr class="bg-secondary">
+                </li>
+                <li>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start">2024</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end timeline-box">Clojure</div>
+                    <hr class="bg-secondary">
+                </li>
+                <li>
+                    <hr class="bg-secondary">
+                    <div class="timeline-start timeline-box">Dynamic programming</div>
+                    <div class="timeline-middle">✅</div>
+                    <div class="timeline-end">2025</div>
                 </li>
             </ul>
         </section>
     </main>
-    <footer id="contacts" class="footer sm:footer-horizontal bg-base-200 min-h-64">
+
+    <footer id="contacts" class="footer sm:footer-horizontal bg-base-200 min-h-48 pt-4">
         <aside>
             <h1 class="text-4xl md:ml-16">Morgan McMillan</h1>
         </aside>
@@ -150,7 +244,7 @@
             <p>(1+) 825-989-9109</p>
         </nav>
         <nav>
-            <h2 class="text-2xl footer-title">Coding</h2>
+        <h2 class="text-2xl footer-title">Coding</h2>
             <a class="flex gap-1 items-center" href="https://github.com/MorganMcmillan">Github <img class="size-4" src="images/github-mark-white.svg" alt="github account"></a>
             <a href="https://www.codingame.com/profile/a10b34d3eadd56af61fb4fad4ad72c121293545">Codingame</a>
         </nav>
