@@ -2716,9 +2716,6 @@
   .bg-neutral {
     background-color: var(--color-neutral);
   }
-  .bg-neutral\/50 {
-    background-color: color-mix(in oklab, var(--color-neutral) 50%, transparent);
-  }
   .bg-primary {
     background-color: var(--color-primary);
   }
@@ -2745,47 +2742,12 @@
     --tw-gradient-from: var(--color-neutral);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-neutral\/40 {
-    --tw-gradient-from: color-mix(in oklab, var(--color-neutral) 40%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-neutral\/50 {
-    --tw-gradient-from: color-mix(in oklab, var(--color-neutral) 50%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .from-neutral\/60 {
     --tw-gradient-from: color-mix(in oklab, var(--color-neutral) 60%, transparent);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-neutral\/70 {
-    --tw-gradient-from: color-mix(in oklab, var(--color-neutral) 70%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-neutral\/80 {
-    --tw-gradient-from: color-mix(in oklab, var(--color-neutral) 80%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-neutral\/90 {
-    --tw-gradient-from: color-mix(in oklab, var(--color-neutral) 90%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-0\% {
-    --tw-gradient-to-position: 0%;
-  }
-  .to-50\% {
-    --tw-gradient-to-position: 50%;
-  }
   .to-70\% {
     --tw-gradient-to-position: 70%;
-  }
-  .to-80\% {
-    --tw-gradient-to-position: 80%;
-  }
-  .to-90\% {
-    --tw-gradient-to-position: 90%;
-  }
-  .to-100\% {
-    --tw-gradient-to-position: 100%;
   }
   .object-contain {
     object-fit: contain;
