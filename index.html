@@ -270,7 +270,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 <script>
-const TOKEN = "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";
+const TOKEN = "REPLACE_API_KEY";
 const USERNAME = "MorganMcmillan";
 
 async function fetchContributions() {
@@ -303,6 +303,8 @@ async function fetchContributions() {
         })
     });
 
+    console.log(contributions.statusText)
+
     return contributions.json();
 }
 
@@ -317,6 +319,9 @@ const MONTHS = ["January","February","March","April","May","June","July","August
 
 // Render GitHub contribution squares using GraphQL API
 $(async function() {
+    // Validate email
+    $("#email").validate();
+
     $(document).tooltip(
         { 
             track: true,
@@ -362,9 +367,6 @@ $(async function() {
             console.log("Added square")
         }
     }
-
-    // Validate email
-    $("#email").validate();
 });
 
 // Add autoscroll to the top carousel
