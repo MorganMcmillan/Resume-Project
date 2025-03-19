@@ -1,2 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@utility gh-square {
+    @apply lg:size-3 size-2.5 bg-green-500 rounded-xs;  
+}
+
+input.error {
+    @apply bg-error text-error-content;
+}
+
+#email-error {
+    @apply text-error;
+}
+
+.ui-tooltip {
+    @apply absolute bg-base-300 rounded-full p-1;
+}
